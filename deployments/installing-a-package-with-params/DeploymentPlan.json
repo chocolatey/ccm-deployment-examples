@@ -1,0 +1,22 @@
+{
+  "Name": "Deployment Plan with Parameters",
+  "ScheduledDateTimeUtc": null,
+  "LastScheduledDateTimeUtc": null,
+  "RepeatPeriod": 0,
+  "ExecutionTimeoutInSeconds": 14400,
+  "RequiresApproval": false,
+  "DeploymentSteps": [
+    {
+      "Name": "Deploy Python to Agent Directory",
+      "IsPrivileged": true,
+      "PlanOrder": 1,
+      "Script": "choco install python312 --package-parameters=\"'/InstallDir:C:\\BuildAgent\\tools\\python312'\"\nexit $LASTEXITCODE",
+      "ValidExitCodes": "0, 1605, 1614, 1641, 3010",
+      "ExecutionTimeoutInSeconds": 14400,
+      "FailOnError": true,
+      "RequireSuccessOnAllComputers": false,
+      "MachineContactTimeoutInMinutes": 0,
+      "DeploymentStepGroupIds": []
+    }
+  ]
+}
