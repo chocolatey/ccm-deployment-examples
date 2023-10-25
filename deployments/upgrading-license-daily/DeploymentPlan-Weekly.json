@@ -1,0 +1,22 @@
+{
+  "Name": "Upgrade License (Weekly)",
+  "ScheduledDateTimeUtc": "2023-01-01T00:00:00Z",
+  "LastScheduledDateTimeUtc": null,
+  "RepeatPeriod": 2,
+  "ExecutionTimeoutInSeconds": 14400,
+  "RequiresApproval": false,
+  "DeploymentSteps": [
+    {
+      "Name": "Update License",
+      "IsPrivileged": false,
+      "PlanOrder": 1,
+      "Script": "upgrade|chocolatey.license||false",
+      "ValidExitCodes": "0, 1605, 1614, 1641, 3010",
+      "ExecutionTimeoutInSeconds": 14400,
+      "FailOnError": true,
+      "RequireSuccessOnAllComputers": false,
+      "MachineContactTimeoutInMinutes": 0,
+      "DeploymentStepGroupIds": []
+    }
+  ]
+}

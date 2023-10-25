@@ -1,0 +1,22 @@
+{
+  "Name": "Installing a Package (Simple)",
+  "ScheduledDateTimeUtc": null,
+  "LastScheduledDateTimeUtc": null,
+  "RepeatPeriod": 0,
+  "ExecutionTimeoutInSeconds": 14400,
+  "RequiresApproval": false,
+  "DeploymentSteps": [
+    {
+      "Name": "Deploy Firefox",
+      "IsPrivileged": false,
+      "PlanOrder": 1,
+      "Script": "upgrade|firefox||false",
+      "ValidExitCodes": "0, 1605, 1614, 1641, 3010",
+      "ExecutionTimeoutInSeconds": 14400,
+      "FailOnError": true,
+      "RequireSuccessOnAllComputers": false,
+      "MachineContactTimeoutInMinutes": 0,
+      "DeploymentStepGroupIds": []
+    }
+  ]
+}
